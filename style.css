@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background: #d6d6d6;
+    --font: "Poppins", sans-serif;
+
+    /* COLORES */
+    --do: #D1425C;
+    --do-s: #E56343;
+    --re: #EA9950;
+    --re-s: #E9B94D;
+    --mi: #EADA51;
+    --fa: #9FC54C;
+    --fa-s: #69A55D;
+    --sol: #3B806E;
+    --sol-s: #3D5F9E;
+    --la: #5639C6;
+    --la-s: #984CBA;
+    --si:#DA61B0;
+}
+
+body{
+    background: var(--background);
+    font-family: var(--font);
+    display: grid;
+    place-items: center;
+    font-size: 12px;
+}
+
+/* FORMULARIO */
+
+.container-login{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.cl-active{
+    display: none;
+}
+
+.login{
+    width: 500px;
+    height: 500px;
+    border-radius: 50px;
+    background: var(--background);
+    box-shadow:  20px 20px 60px #b6b6b6,-20px -20px 60px #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.miss-laury{
+    margin: 20px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.label{
+    color: #4a4a4a;
+}
+
+input{
+    all: unset;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    background: #d6d6d6;
+    box-shadow: inset 6px 6px 12px #b6b6b6, inset -6px -6px 12px #f6f6f6;
+    text-indent: 20px;
+}
+
+.button{
+    all: unset;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    background: #d6d6d6;
+    box-shadow:  20px 20px 60px #b6b6b6,-20px -20px 60px #f6f6f6;
+}
+
+.button:active{
+    border-radius: 50px;
+    background: linear-gradient(145deg, #c1c1c1, #e5e5e5);
+    box-shadow:  6px 6px 12px #c7c7c7, -6px -6px 12px #e5e5e5;
+}
+
+/* END FORMULARIO */
+
+.container-general{
+    display: none ; /* cambiar a none */
+    max-width: 1100px;
+}
+
+/* BOTONES */
+
+.container-botones{
+    margin: 20px;
+    height: 100%;
+    border-radius: 50px;
+    background: #d6d6d6;
+    box-shadow:  20px 20px 60px #b6b6b6,-20px -20px 60px #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container-notas{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.nota{
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    background: #d6d6d6;
+    box-shadow:  20px 20px 60px #b6b6b6,-20px -20px 60px #f6f6f6;
+    cursor: pointer;
+}
+
+.nota-mi, .nota-si{
+    width: 160px;
+    height: 70px;
+    border-radius: 20px;
+    background: #d6d6d6;
+    box-shadow:  20px 20px 60px #b6b6b6, -20px -20px 60px #f6f6f6;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.p-do{
+    border-bottom: 3px solid var(--do);
+    width: 25px;
+    text-align: center;
+}
+
+.p-do-s{
+    border-bottom: 3px solid var(--do-s);
+}
+
+.p-re{
+    border-bottom: 3px solid var(--re);
+    width: 25px;
+    text-align: center;
+}
+
+.p-re-s{
+    border-bottom: 3px solid var(--re-s);
+}
+
+.p-mi{
+    border-bottom: 3px solid var(--mi);
+    width: 25px;
+    text-align: center;
+}
+
+.p-fa{
+    border-bottom: 3px solid var(--fa);
+    width: 25px;
+    text-align: center;
+}
+
+.p-fa-s{
+    border-bottom: 3px solid var(--fa-s);
+}
+
+.p-sol{
+    border-bottom: 3px solid var(--sol);
+    width: 25px;
+    text-align: center;
+}
+
+.p-sol-s{
+    border-bottom: 3px solid var(--sol-s);
+}
+
+.p-la{
+    border-bottom: 3px solid var(--la);
+    width: 25px;
+    text-align: center;
+}
+
+.p-la-s{
+    border-bottom: 3px solid var(--la-s);
+}
+
+.p-si{
+    border-bottom: 3px solid var(--si);
+    width: 25px;
+    text-align: center;
+}
+
+
+.nota:active, .nota-mi:active , .nota-si:active{
+    background: #d6d6d6;
+    box-shadow: inset 7px 7px 14px #b6b6b6, inset -7px -7px 14px #f6f6f6;
+}
+
+/* END BOTONES */
+
+/* PRINT */
+
+.container-print{
+    width: 800px;
+    max-height: 95%;
+    margin: 20px auto;
+    border-radius: 50px;
+    background: #d6d6d6;
+    box-shadow: inset 20px 20px 60px #b6b6b6, inset -20px -20px 60px #f6f6f6;
+    padding: 40px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    overflow: auto;
+    justify-content: flex-start;
+}
+
+.print{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+
+.do, .doS, .re, .reS, .mi, .fa, .faS, .sol, .solS, .la, .laS, .si{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #848484;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.space{
+    width: 50px;
+    height: 50px;
+}
+
+.do{
+    background: var(--do);
+}
+
+.doS{
+    background: var(--do-s);
+}
+
+.re{
+    background: var(--re);
+}
+
+.reS{
+    background: var(--re-s);
+}
+
+.mi{
+    background: var(--mi);
+}
+
+.fa{
+    background: var(--fa);
+}
+
+.faS{
+    background: var(--fa-s);
+}
+
+.sol{
+    background: var(--sol);
+}
+
+.solS{
+    background: var(--sol-s);
+}
+
+.la{
+    background: var(--la);
+}
+
+.laS{
+    background: var(--fa-s);
+}
+
+.si{
+    background: var(--si);
+}
+
+.line-container{
+    width: 100%;
+    height: 20px;
+}
+
+
+/* END PRINT */
