@@ -1,5 +1,5 @@
 import { formValid } from "./form.js"
-import { printColor } from "./functions.js"
+import { printColor, spacebar } from "./functions.js"
 
 const nickname = document.querySelector(".nickname")
 const password = document.querySelector(".password")
@@ -15,6 +15,7 @@ login.addEventListener("click", ()=>{
 
 const buttons = document.querySelectorAll(".js")
 const print = document.querySelector(".print")
+const newDiv = document.createElement("div")
 
 buttons.forEach(button => {
     button.addEventListener("click", ()=>{
@@ -24,6 +25,10 @@ buttons.forEach(button => {
 
         printColor(pText, newDiv, currentLineContainer, print)
         print.appendChild(newDiv);
+        
     })
 });
+
+spacebar(newDiv, print)
+
 

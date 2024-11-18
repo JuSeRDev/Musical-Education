@@ -1,50 +1,50 @@
 const printColor = (param, newDiv, currentLineContainer, print)=>{
     switch (param) {
-        case "DO":
+        case "DO/C":
             newDiv.classList.add("do");
             newDiv.innerHTML = param;
             break;
-        case "DO#":
+        case "DO#/C#":
             newDiv.classList.add("doS");
             newDiv.innerHTML = param;
             break;
-        case "RE":
+        case "RE/D":
             newDiv.classList.add("re");
             newDiv.innerHTML = param;
             break;
-        case "RE#":
+        case "RE#/D#":
             newDiv.classList.add("reS");
             newDiv.innerHTML = param;
             break;
-        case "MI":
+        case "MI/E":
             newDiv.classList.add("mi");
             newDiv.innerHTML = param;
             break;
-        case "FA":
+        case "FA/F":
             newDiv.classList.add("fa");
             newDiv.innerHTML = param;
             break;
-        case "FA#":
+        case "FA#/F#":
             newDiv.classList.add("faS");
             newDiv.innerHTML = param;
             break;
-        case "SOL":
+        case "SOL/G":
             newDiv.classList.add("sol");
             newDiv.innerHTML = param;
             break;
-        case "SOL#":
+        case "SOL#/G#":
             newDiv.classList.add("solS");
             newDiv.innerHTML = param;
             break;
-        case "LA":
+        case "LA/A":
             newDiv.classList.add("la");
             newDiv.innerHTML = param;
             break;
-        case "LA#":
+        case "LA#/A#":
             newDiv.classList.add("laS");
             newDiv.innerHTML = param;
             break;
-        case "SI":
+        case "SI/B":
             newDiv.classList.add("si");
             newDiv.innerHTML = param;
             break;
@@ -74,17 +74,32 @@ const removeLastNote = (print) => {
     if (allNotes.length > 0) {
         const lastNote = allNotes[allNotes.length - 1]; // El último div (nota)
         lastNote.remove(); // Elimina el último div
-    } else {
-        console.log("No hay notas para eliminar.");
     }
 };
-
-
 
 // Elimina todos los divs creados
 const clearAllNotes = (print) => {
     print.innerHTML = "";
 };
 
+const keydownFunc = (e, newDiv, classes, print)=>{
+    e.preventDefault()
+    newDiv = document.createElement("div")
+    newDiv.classList.add(classes)
+    print.appendChild(newDiv);
+}
 
-export {printColor}
+const spacebar = (newDiv, print)=>{
+    document.addEventListener("keydown", (e)=>{
+        if (e.key === " ") {
+            keydownFunc(e, newDiv, "space", print)
+        } else if (e.key === "Enter"){
+            keydownFunc(e, newDiv, "line-container", print)
+        }else if (e.key === "Backspace"){
+            removeLastNote(print)
+        }
+    })
+}
+
+
+export {printColor, spacebar}

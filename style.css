@@ -30,7 +30,7 @@ body{
     font-family: var(--font);
     display: grid;
     place-items: center;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 /* FORMULARIO */
@@ -130,7 +130,7 @@ input{
 }
 
 .nota{
-    width: 70px;
+    width: 80px;
     height: 70px;
     display: grid;
     place-items: center;
@@ -141,7 +141,7 @@ input{
 }
 
 .nota-mi, .nota-si{
-    width: 160px;
+    width: 180px;
     height: 70px;
     border-radius: 20px;
     background: #d6d6d6;
@@ -153,7 +153,6 @@ input{
 
 .p-do{
     border-bottom: 3px solid var(--do);
-    width: 25px;
     text-align: center;
 }
 
@@ -163,7 +162,6 @@ input{
 
 .p-re{
     border-bottom: 3px solid var(--re);
-    width: 25px;
     text-align: center;
 }
 
@@ -173,13 +171,11 @@ input{
 
 .p-mi{
     border-bottom: 3px solid var(--mi);
-    width: 25px;
     text-align: center;
 }
 
 .p-fa{
     border-bottom: 3px solid var(--fa);
-    width: 25px;
     text-align: center;
 }
 
@@ -189,7 +185,6 @@ input{
 
 .p-sol{
     border-bottom: 3px solid var(--sol);
-    width: 25px;
     text-align: center;
 }
 
@@ -209,7 +204,6 @@ input{
 
 .p-si{
     border-bottom: 3px solid var(--si);
-    width: 25px;
     text-align: center;
 }
 
@@ -247,14 +241,15 @@ input{
 }
 
 .do, .doS, .re, .reS, .mi, .fa, .faS, .sol, .solS, .la, .laS, .si{
-    width: 50px;
+    width: 70px;
     height: 50px;
     border-radius: 10px;
-    box-shadow: 2px 2px 10px #848484;
+    box-shadow: 2px 2px 10px #84848439;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    text-shadow: 1px 1px 4px rgb(56, 56, 56);
 }
 
 .space{
