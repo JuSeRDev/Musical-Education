@@ -46,7 +46,3 @@ buttons.forEach(button => {
         print.appendChild(newDiv);
     })
 });
-
-
-
-
