@@ -61,7 +61,6 @@ const printColor = (param, newDiv, currentLineContainer, print)=>{
         case "Clear":
             clearAllNotes(print)
         default:
-            console.log("Nota no válida");
             return; 
     }
 }
@@ -89,17 +88,69 @@ const keydownFunc = (e, newDiv, classes, print)=>{
     print.appendChild(newDiv);
 }
 
-const spacebar = (newDiv, print)=>{
+
+const addNote = (noteClass, noteContent, print, newDiv)=>{
+    newDiv = document.createElement("div")
+    newDiv.classList.add(noteClass)
+    newDiv.innerHTML = noteContent
+    print.appendChild(newDiv)
+}
+
+const keydown = (newDiv, print)=>{
     document.addEventListener("keydown", (e)=>{
-        if (e.key === " ") {
-            keydownFunc(e, newDiv, "space", print)
-        } else if (e.key === "Enter"){
-            keydownFunc(e, newDiv, "line-container", print)
-        }else if (e.key === "Backspace"){
-            removeLastNote(print)
+        switch (e.key) {
+            case " ":
+                keydownFunc(e, newDiv, "space", print)
+                break;
+            case "Backspace":
+                removeLastNote(print)
+                break
+            case "Enter":
+                keydownFunc(e, newDiv, "line-container", print)
+                break
+            case "c":
+                addNote("do", "DO/C", print, newDiv)
+                break
+            case "C":
+                addNote("doS", "DO#/C#", print, newDiv)
+                break
+            case "d":
+                addNote("re", "RE/D", print, newDiv)
+                break
+            case "D":
+                addNote("reS", "RE#/D#", print, newDiv)
+                break
+            case "e":
+                addNote("mi", "MI/E", print, newDiv)
+                break
+            case "f":
+                addNote("fa", "FA/F", print, newDiv)
+                break
+            case "F":
+                addNote("faS", "FA#/F#", print, newDiv)
+                break
+            case "g":
+                addNote("sol", "SOL/G", print, newDiv)
+                break
+            case "G":
+                addNote("solS", "SOL#/G#", print, newDiv)
+                break
+            case "a":
+                addNote("la", "LA/A", print, newDiv)
+                break
+            case "A":
+                addNote("laS", "LA#/A#", print, newDiv)
+                break
+            case "b":
+                addNote("si", "SI/B", print, newDiv)
+                break
+            default:
+                break;
         }
     })
 }
 
 
-export {printColor, spacebar}
+
+
+export {printColor, keydown}
